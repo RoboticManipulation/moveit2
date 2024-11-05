@@ -105,7 +105,7 @@ void sortConstraints(std::vector<moveit_msgs::msg::JointConstraint>& joint_const
 // Trajectory Cache ============================================================
 
 TrajectoryCache::TrajectoryCache(const rclcpp::Node::SharedPtr& node)
-  : node_(node), logger_(moveit::getLogger("moveit.ros.trajectory_cache"))
+  : node_(node), logger_(node_->get_logger())
 {
   tf_buffer_ = std::make_unique<tf2_ros::Buffer>(node_->get_clock());
   tf_listener_ = std::make_shared<tf2_ros::TransformListener>(*tf_buffer_);
