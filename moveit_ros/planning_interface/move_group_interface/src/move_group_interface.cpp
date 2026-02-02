@@ -144,7 +144,7 @@ public:
     look_around_attempts_ = 0;
     can_replan_ = false;
     replan_delay_ = 2.0;
-    replan_attempts_ = 1;
+    replan_attempts_ = 0;
     goal_joint_tolerance_ = 1e-4;
     goal_position_tolerance_ = 1e-4;     // 0.1 mm
     goal_orientation_tolerance_ = 1e-3;  // ~0.1 deg

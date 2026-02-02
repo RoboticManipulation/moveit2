@@ -91,7 +91,8 @@ plan_execution::PlanExecution::PlanExecution(
         node_, planning_scene_monitor_->getRobotModel(), planning_scene_monitor_->getStateMonitor());
   }
 
-  default_max_replan_attempts_ = 5;
+  default_max_replan_attempts_ = 0;
+  //default_max_replan_attempts_ = 5;
 
   new_scene_update_ = false;
 
